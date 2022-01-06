@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste Beneficiaires{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div style="text-align:center">
+    <h1>Liste des bénéficiaires</h1>
+  </div>
+
+  <table>
+    <tr style="height:50px;">
+      <th style="border:1px solid black; width:100px; text-align:center">nom</th>
+      <th style="border:1px solid black; width:100px; text-align:center">prenom</th>
+      <th style="border:1px solid black; width:200px; text-align:center">mail</th>
+      <th style="border:1px solid black; width:200px; text-align:center">telephone</th>
+      <th style="border:1px solid black; width:400px; text-align:center">postale</th>
+      <th style="border:1px solid black; width:100px; text-align:center">nb parts</th>
+      <th style="border:1px solid black; width:100px; text-align:center">mot mairie</th>
+      <th style="border:1px solid black; width:100px; text-align:center">carte donnee</th>
+      <th style="border:1px solid black; width:150px; text-align:center">presence aux distributions</th>
+      <th style="border:1px solid black; width:100px; text-align:center">remarque</th>
+    </tr>
+    {% for benef in benefs %}
+    <tr style="text-align:center">
+      <td style="border:1px solid black">{{benef.Nom}}</td>
+      <td style="border:1px solid black">{{benef.prenom}}</td>
+      <td style="border:1px solid black">{{benef.mail}}</td>
+      <td style="border:1px solid black">{{benef.telephone}}</td>
+      <td style="border:1px solid black">{{benef.postale}}</td>
+      <td style="border:1px solid black">{{benef.nb_parts}}</td>
+      <td style="border:1px solid black">{{benef.mot_mairie}}</td>
+      <td style="border:1px solid black">{{benef.carte_donnee}}</td>
+      <td style="border:1px solid black">{{benef.presence_aux_distributions}}</td>
+      <td style="border:1px solid black">{{benef.champ_remarque}}</td>
+      <td style=""><a href="{% url 'modifierbenef' benef.id %}">update</a></td>
+      <td style=""><a href="{% url 'delete_benef' benef.id %}">/delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <div style="text-align:center; margin:1em">
+    <a href="/users/benef">Ajouter un beneficiaire</a><br>
+  </div>
+  <a href="/">Retour Index</a><br>
+</div>
+
+{% endblock %}

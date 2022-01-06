@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block content %}
+<div class = "jumbotron text-center">
+  <div class="container">
+    <h1>Aldi Express</h1>
+    <p>Bienvene chez Aldi Express. Passez votre commande aujourd'hui !</p>
+    <img class="mb-4" src="https://www.svgrepo.com/show/10581/shopping-cart.svg"alt="" width="100" height="100">
+    <br>
+    <a href="/users/benef">Inscrivez-vous</a>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Nos objectifs</h1><br>
+
+  <p class="text-right">
+    Aldi Express est une banque alimentaire locale située à nanterre dans le quartier de l'Université.
+    Notre objectif est de permettre à nos concitoyens et aux étudiants qui en ont besoin de bénéficier d'aides,
+    que ce soit des biens de première nécessité ou des aides alimentaires afin de supporter au mieux les personnes dans le besoin durant la crise de la COVID-19.
+    Pour bénéficier de ces aides, il vous suffit de vous enregistrer sur le site via l'onglet "Inscription" pour y saisir vos informations personnelles ainsi que vos disponibilités.
+  </p>
+  <br>
+
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+    <a class="thumbnail" href="#">
+    <img class="img-responsive" src="https://thumbor.thedailymeal.com/d5Uau-OAI-QEm1BpO5lr3LR-kHw=//https://www.thedailymeal.com/sites/default/files/2019/07/03/supermarketcart_main.JPG" alt="">
+    </a>
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+    <a class="thumbnail" href="#">
+      <img class="img-responsive" src="https://www.gecurrent.com/sites/default/files/styles/og_large/public/images/how-is-the-grocery-store-footprint-changing-850x567.jpg?itok=82i5Qll1" alt="">
+    </a>
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+    <a class="thumbnail" href="#">
+      <img class="img-responsive" src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1141999659%2F0x0.jpg" alt="">
+    </a>
+  </div>
+
+  <div class="text-center">
+    <div class="col-sm-4 col-md-4">
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <div class="thumbnail">
+        <img src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1141999659%2F0x0.jpg" alt="" width="600" height="400">
+        <div class="caption">
+          <h3>Consultez vos options</h3>
+          <p>Grâce à notre équipe chez Aldi Express, nous nous engagons à vous fournir les meilleures offres alimentaires possibles.</p>
+          <p><a onclick = "location.href = 'D:/S5/siteTest/benef.html#'" href="#" class="btn btn-primary" role="button">Inscrivez-vous</a> </p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<!--
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="https://www.bazaar-int.com/images/food-beverage.jpg" width="350px">
+        <div class="caption">
+          <h3>Des stocks partout dans le monde</h3>
+          <p>Peu importe l'endroit où vous vous situez, notre livraison internationale nous permet de vous joindre partout dans le monde.</p>
+          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<input type="submit" class="btn btn-default" value="submit"/>-->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+{% endblock %}

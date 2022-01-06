@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}Nouveau Beneficiaire{% endblock %}
+
+{% block content %}
+<form class="form-horizontal" method="POST">
+{% csrf_token %}
+
+<div class="container">
+  <h1 class = "text-center">Inscription</h1>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nom</label>
+    <input type="text" class="form-control" id="Nom" placeholder="Nom du bénéficiaire" name="Nom">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Prénom</label>
+    <input type="text" class="form-control" id="Prenom" placeholder="Prénom du bénéficiaire" name="prenom">
+  </div>
+
+  <div class="form-group">
+    <label>Mail</label>
+    <input type="text" class="form-control" id="" placeholder="Adresse Mail" name="mail">   
+  </div>
+
+  <div class="form-group">
+    <label>Téléphone</label>
+    <input type="text" class="form-control" id="" placeholder="Numéro de Téléphone" name="telephone">
+  </div>
+
+  <div class="form-group">
+    <label>Adresse</label>
+    <input type="text" class="form-control" id="" placeholder="Adresse" name="postale">
+  </div>
+
+  <div class="form-group">
+    <label>Nombre de parts</label><br>
+
+    <label class="radio-inline">
+      <input type="radio" value="0-3" name="nb_parts"> 0-3
+    </label>
+    <label class="radio-inline">
+    <input type="radio" value="4-14" name="nb_parts"> 4-14
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="15-24" name="nb_parts"> 15-24
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="25-64" name="nb_parts"> 25-64
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="65-999" name="nb_parts"> 65+
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Mot Mairie</label><br>
+
+    <label class="radio-inline">
+      <input type="radio" value="True" name="mot_mairie"> Oui
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="False" name="mot_mairie"> Non
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="cartedonnée">Carte donnée</label><br>
+
+    <label class="radio-inline">
+      <input type="radio" value="True" name="carte_donnee"> Oui
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="False" name="carte_donnee"> Non
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="presence_aux_distributions">Présence aux distributions</label><br>
+
+    <label class="radio-inline">
+      <input type="radio" value="True" name="presence_aux_distributions"> Oui
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="False" name="presence_aux_distributions"> Non
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Remarques</label><br>
+    <input type="text" class="form-control" name="champ_remarque" placeholder="Remarques">
+  </div>
+
+  <!--<input type="submit" class="btn btn-default" value="submit"/>-->
+  <div class="col text-center">
+    <button type="submit" class="btn btn-primary btn-lg active">Envoyer
+      <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <a href="../users/listebenef">Retour Index</a><br>
+</div>
+
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+{% endblock %}

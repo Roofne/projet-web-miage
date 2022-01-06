@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Liste Produits{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center">Liste Produits</h1>
+
+  {% if produits %}
+  <table style="border:1px solid black; margin:auto">
+    <tr style="height:50px;">
+      <th style="border:1px solid black; width:150px; text-align:center">Nom</th>
+      <th style="border:1px solid black; width:100px; text-align:center">Quantitée</th>
+      <th style="border:1px solid black; width:200px; text-align:center">Categorie</th>
+    </tr>
+    {% for produit in produits %}
+    <tr style="text-align:center">
+      <td style="border:1px solid black">{{produit.nom}}</td>
+      <td style="border:1px solid black">{{produit.qty}}</td>
+      <td style="border:1px solid black">{{produit.category}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>Pas de produits disponibles</p>
+  {% endif %}
+
+  <div style="text-align:center; margin:1em">
+    <a href="/products/formulaire">Ajouter un produit</a><br>
+  </div>
+  <a href="/">Retour Index</a><br>
+</div>
+
+{% endblock %}
